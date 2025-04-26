@@ -12,7 +12,7 @@ router.post('/register',[
     body('password').isLength({min:6}).withMessage("Password must be at least 6 characters"),
 ],userController.registerUser)
 
-router.get('/login',[
+router.post('/login',[
     body('email').isEmail().withMessage("Email is required"),
     body('password').isLength({min:6}).withMessage("Password must be at least 6 characters"),
 ],userController.loginUser)

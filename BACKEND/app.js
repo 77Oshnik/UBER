@@ -15,8 +15,8 @@ app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
 app.use(express.json())
-app.use('/api/user',userRoute)
-app.use('/api/captain',captainRoute)
+app.use('/api/users', userRoute)
+app.use('/api/captains', captainRoute)
 
 
 module.exports=app
